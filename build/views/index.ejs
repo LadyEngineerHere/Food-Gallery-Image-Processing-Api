@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Gallery Image Processing API</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+  <div class="title-container"> <!-- Wrap the title in a container -->
+    <h1>Welcome to the Food Gallery Image Processing API</h1>
+  </div>
+  <p>
+    This API offers the functionality to resize images from the food gallery. To resize an image, use the following
+    syntax (note: substitute words in full caps with your desired inputs):
+  </p>
+ 
+  
+  <div class="full-images-grid">
+    <% filenames.filter(filename => !filename.startsWith('.DS_Store')).forEach((filename) => { %>
+      <div class="image">
+        <img src="<%= 'images/full/' + filename + '.jpg' %>" style="height: 200px; width: 200px"/>
+        <%= `filename: ${filename}` %> 
+      </div>
+    <% }) %>
+  </div>
+
+  <p>
+    http://localhost:3005/api/images?filename=<strong>FILENAME</strong>&height=<strong>HEIGHT</strong>&width=<strong>WIDTH</strong>
+  </p>
+  <ul>
+    <li>Filename: should be one of the available filenames listed below</li>
+    <li>Height: should be a positive integer</li>
+    <li>Width: should be a positive integer</li>
+  </ul>
+</body>
+</html>

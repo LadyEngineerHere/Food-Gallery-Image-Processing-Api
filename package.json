@@ -1,0 +1,47 @@
+{
+  "name": "food-gallery-image-processing-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy-assets": "ts-node src/utils/copyAssets",
+    "build": "npx tsc && npm run copy-assets",
+    "start": "nodemon src/app.ts",
+    "jasmine": "jasmine",
+    "test": "npm run build && npm run jasmine",
+    "lint": "eslint . --ext .ts",
+    "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
+  },
+  "author": "Amanda Gomez",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@types/ejs": "^3.0.6",
+    "@types/express": "^4.17.11",
+    "@types/jasmine": "^3.6.10",
+    "@types/node": "^15.14.9",
+    "@types/sharp": "^0.28.1",
+    "@types/shelljs": "^0.8.8",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "shelljs": "^0.8.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jasmine": "^3.7.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "sharp": "^0.28.2",
+    "supertest": "^6.1.3"
+  }
+}

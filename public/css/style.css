@@ -1,0 +1,26 @@
+.full-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted grid columns */
+  grid-gap: 6px; /* Reduced grid gap */
+  background-color: rgb(30, 165, 255); /* Setting background color */
+  color: white; /* Setting text color */
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(30, 165, 255); /* Setting background color */
+  color: white; /* Setting text color */
+}
+.title-container {
+  text-align: center; /* Center-align the text */
+}
+.content-container {
+  text-align: center; /* Center-align all text within the container */
+}
+
+.centered-text {
+  text-align: center; /* Center-align the text within these elements */
+}
+
+
